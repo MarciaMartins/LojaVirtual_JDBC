@@ -1,0 +1,9 @@
+package lojaVirtual_JDBC;
+
+import java.sql.DriverManager;
+
+public class ConnectionFactory {
+	public Connection getConnection() {
+		return DriverManager.getConnection("jdbc:mysql://localhost/loja_virtual", "root", "1234");
+	}
+}

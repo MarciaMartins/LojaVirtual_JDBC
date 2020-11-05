@@ -1,0 +1,9 @@
+package lojaVirtual_JDBC;
+
+import java.sql.DriverManager;
+
+public class ConnectionFactory {
+	public Connection getConnection() {
+		DriverManager.getConnection(url);
+	}
+}

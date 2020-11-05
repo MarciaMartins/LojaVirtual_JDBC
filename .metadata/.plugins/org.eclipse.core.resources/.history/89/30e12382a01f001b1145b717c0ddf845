@@ -1,0 +1,10 @@
+package lojaVirtual_JDBC;
+
+public class TestaInsercao {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
