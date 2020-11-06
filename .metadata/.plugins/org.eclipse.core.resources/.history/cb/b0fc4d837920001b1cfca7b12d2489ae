@@ -1,0 +1,12 @@
+package lojaVirtual_JDBC.modelo;
+
+public class Produto {
+	private int id;
+	private String nome;
+	private String descricao;
+		
+	public Produto(String nome, String descricao) {
+		this.nome=nome;
+		this.descricao=descricao;
+	}
+}

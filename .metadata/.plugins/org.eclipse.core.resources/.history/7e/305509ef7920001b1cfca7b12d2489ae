@@ -1,0 +1,41 @@
+package lojaVirtual_JDBC;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import com.mysql.jdbc.PreparedStatement;
+
+import lojaVirtual_JDBC.modelo.Produto;
+
+public class TestaInsercaoClasseProduto {
+
+	public static void main(String[] args) throws SQLException {
+		Produto	produto = new Produto("Produto Classe", "produto descricao");
+		
+		
+		ConnectionFactory factory = new ConnectionFactory();
+		Connection connection = factory.getConnection();
+		PreparedStatement stmt = 
+				(PreparedStatement) connection
+		.prepareStatement("INSERT INTO PRODUTO(NOME, DESCRICAO) VALUES (?,?)",
+				Statement.RETURN_GENERATED_KEYS);
+		
+		String nome = produto.getNome();
+		String descricao = produto.getDescricao();
+		
+		stmt.setString(1, nome);
+		stmt.setString(2, descricao);
+		stmt.execute();
+		ResultSet rst = stmt.getGeneratedKeys();
+		while(rst.next()) {
+			System.out.println(rst.getInt("ID"));
+			System.out.println(rst.getString("Nome"));
+			System.out.println(rst.getString("Descricao"));
+		}
+		
+
+	}
+
+}

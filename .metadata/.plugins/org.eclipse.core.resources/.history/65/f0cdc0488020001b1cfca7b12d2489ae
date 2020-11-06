@@ -16,7 +16,7 @@ public class ConnectionFactory {
 		combo.setUser("root");
 		combo.setPassword("1234");
 		
-		//combo.setMaxPoolSize(15);
+		combo.setMaxPoolSize(15);
 		
 		this.dataSource = combo;
 	}
