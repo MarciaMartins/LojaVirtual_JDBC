@@ -1,10 +1,9 @@
 package lojaVirtual_JDBC;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
+import java.sql.Statement;
 
 public class TestaListagem {
 
@@ -13,8 +12,8 @@ public class TestaListagem {
 		ConnectionFactory connectionFactory = new ConnectionFactory();
 		Connection connection = connectionFactory.getConnection();
 				
-		PreparedStatement stmt = connection.prepareStatement("Select * from produto");
-		stmt.execute();
+		Statement stmt = connection.createStatement();
+		stmt.execute("Select * from produto");
 		ResultSet rst = stmt.getResultSet();
 		
 		while (rst.next()) {
