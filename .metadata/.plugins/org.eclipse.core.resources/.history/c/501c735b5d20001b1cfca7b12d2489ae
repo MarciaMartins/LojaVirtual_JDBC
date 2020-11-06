@@ -1,0 +1,13 @@
+package lojaVirtual_JDBC;
+
+import java.sql.Connection;
+
+public class TestaPoolConexoes {
+
+	public static void main(String[] args) {
+		ConnectionFactory conFactory = new ConnectionFactory();
+		Connection connection = conFactory.getConnection();
+
+	}
+
+}
