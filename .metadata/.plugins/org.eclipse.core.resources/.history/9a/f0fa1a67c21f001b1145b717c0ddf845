@@ -1,0 +1,14 @@
+package lojaVirtual_JDBC;
+
+import java.sql.Connection;
+
+public class TestaRemocao {
+
+	public static void main(String[] args) {
+		
+		ConnectionFactory conFac = new ConnectionFactory();
+		Connection connection = conFac.getConnection();
+
+	}
+
+}
