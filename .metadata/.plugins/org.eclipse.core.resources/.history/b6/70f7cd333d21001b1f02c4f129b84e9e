@@ -1,0 +1,30 @@
+package lojaVirtual_JDBC;
+
+
+import java.sql.Connection;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import lojaVirtual_JDBC.modelo.Produto;
+
+public class TestaExclusaoComProduto {
+
+	public static void main(String[] args) throws SQLException {
+		Produto produto = new Produto("produto para exclusao", "descrição para produto excluido");
+		List<Produto> listaProdutos = new ArrayList<Produto>();
+		
+		ConnectionFactory factory = new ConnectionFactory();
+		try(Connection connection =	factory.getConnection()){
+			ProdutoDAO produtoDAO = new ProdutoDAO(connection);
+			produtoDAO.inserir(produto);
+			listaProdutos= produtoDAO.listar();
+			
+//			produtoDAO.excluir(produto);
+//			listaProdutos= produtoDAO.listar();
+		}
+
+	}
+
+}

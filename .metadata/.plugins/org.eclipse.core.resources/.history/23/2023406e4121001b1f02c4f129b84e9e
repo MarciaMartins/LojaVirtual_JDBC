@@ -1,0 +1,23 @@
+package lojaVirtual_JDBC;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import lojaVirtual_JDBC.modelo.Produto;
+
+public class TestaAlterarProdutoClasseDAO {
+
+	public static void main(String[] args) throws SQLException {
+		Produto produto = new Produto("Produto para alteracao", "Descricao de produto para alteracao com erro");
+		ConnectionFactory factory = new ConnectionFactory();
+		int idProdutoCriado;
+		try(Connection connection = factory.getConnection()){
+			ProdutoDAO produtoDAO = new ProdutoDAO(connection);
+			idProdutoCriado = produtoDAO.inserir(produto);
+			
+		}
+		
+
+	}
+
+}
