@@ -9,6 +9,12 @@ public class Produto {
 		this.nome=nome;
 		this.descricao=descricao;
 	}
+	
+	public Produto(int id, String nome, String descricao) {
+		this.id=id;
+		this.nome=nome;
+		this.descricao=descricao;
+	}
 
 	public int getId() {
 		return id;
@@ -37,7 +43,7 @@ public class Produto {
 	@Override
 	public String toString() {
 		
-		return String.format("O produto foi adicionado %d, %s, %s", this.id, this.nome, this.descricao);
+		return String.format("Produto: %d, %s, %s", this.id, this.nome, this.descricao);
 		
 	}
 	

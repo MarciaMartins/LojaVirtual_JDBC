@@ -1,0 +1,17 @@
+package lojaVirtual_JDBC;
+
+import java.sql.Connection;
+
+import lojaVirtual_JDBC.modelo.Produto;
+
+public class PersistenciaProduto {
+	private Connection connection;
+	
+	public PersistenciaProduto() {
+		this.connection = connection;
+	}
+	
+	public void salvarProduto(Produto produto) {
+		
+	}
+}

@@ -1,0 +1,22 @@
+package lojaVirtual_JDBC;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class TestaInsercaoListagemComProduto {
+
+	public static void main(String[] args) throws SQLException {
+		ConnectionFactory factory = new ConnectionFactory();
+		Connection connection = factory.getConnection();
+		PreparedStatement pstmt = connection.prepareStatement("SELECT * FROM PRODUTO", Statement.RETURN_GENERATED_KEYS);
+		pstmt.execute();
+		ResultSet rset = pstmt.getGeneratedKeys();
+		while(rset.next()) {
+			System.out.println("ID: ", rset.getInt(1));
+		}
+		
+	}
+}

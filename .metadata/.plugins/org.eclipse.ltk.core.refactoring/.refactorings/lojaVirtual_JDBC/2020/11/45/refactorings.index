@@ -1,2 +1,4 @@
 1604673200447	Delete element
 1604674683167	Extract method 'adicionarVariavel'
+1604705366109	Rename type 'PersistenciaProduto'
+1604705947253	Rename method 'salvarProduto'

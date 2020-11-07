@@ -1,0 +1,5 @@
+package lojaVirtual_JDBC;
+
+public class PersistenciaProduto {
+
+}

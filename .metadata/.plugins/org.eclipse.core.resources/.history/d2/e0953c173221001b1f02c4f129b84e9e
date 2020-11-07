@@ -1,0 +1,20 @@
+package lojaVirtual_JDBC;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class TestaInsercaoListagemComProduto {
+
+	public static void main(String[] args) throws SQLException {
+		Produto produto = new Produto();
+		ConnectionFactory factory = new ConnectionFactory();
+		try(Connection connection =
+				factory.getConnection()){
+			
+		}
+		
+	}
+}
