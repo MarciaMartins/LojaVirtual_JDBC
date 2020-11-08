@@ -1,0 +1,15 @@
+package lojaVirtual_JDBC.modelo;
+
+public class Categoria {
+	private Integer id;
+	private String descricao;
+	
+	Categoria(Integer id, String descricao){
+		this.id = id;
+		this.descricao = descricao;
+	}
+	
+	public String getDescricao() {
+		return descricao;
+	}
+}

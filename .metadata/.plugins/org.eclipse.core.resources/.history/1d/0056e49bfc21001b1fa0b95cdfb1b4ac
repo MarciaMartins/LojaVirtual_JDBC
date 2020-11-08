@@ -1,0 +1,5 @@
+package lojaVirtual_JDBC.modelo;
+
+public class Categoria {
+
+}

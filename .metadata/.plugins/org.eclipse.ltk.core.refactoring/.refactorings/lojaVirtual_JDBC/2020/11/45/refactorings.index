@@ -3,3 +3,4 @@
 1604705366109	Rename type 'PersistenciaProduto'
 1604705947253	Rename method 'salvarProduto'
 1604784803271	Rename type 'TestaExclusaoComProduto'
+1604786450188	Move compilation units

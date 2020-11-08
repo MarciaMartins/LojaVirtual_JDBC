@@ -1,0 +1,18 @@
+package lojaVirtual_JDBC.testes;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+import lojaVirtual_JDBC.ConnectionFactory;
+
+public class TestaListagemCategorias {
+
+	public static void main(String[] args) {
+		
+		Try(Connection connection = new ConnectionFactory().getConnection()){
+			PreparedStatement pstmt = connection.prepareStatement(connection)
+		}
+
+	}
+
+}

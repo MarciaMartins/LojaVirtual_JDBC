@@ -1,0 +1,19 @@
+package lojaVirtual_JDBC.testes;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import lojaVirtual_JDBC.CategoriaDAO;
+import lojaVirtual_JDBC.ConnectionFactory;
+
+public class TestaListagemCategorias {
+
+	public static void main(String[] args) throws SQLException {
+		try(Connection connection = new ConnectionFactory().getConnection()){
+			CategoriaDAO categoriaDao = new CategoriaDAO(connection);
+			
+		}
+
+	}
+
+}

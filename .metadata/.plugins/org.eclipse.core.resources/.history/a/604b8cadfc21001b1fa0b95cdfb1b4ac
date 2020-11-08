@@ -1,0 +1,8 @@
+package lojaVirtual_JDBC.modelo;
+
+public class Categoria {
+	private Integer id;
+	private String descricao;
+	
+	
+}
